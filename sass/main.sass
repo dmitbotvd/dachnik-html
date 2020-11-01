@@ -1,0 +1,228 @@
+$salat: #0FB935
+$green: #078523
+$black: #1E1E1E
+$gray: #B8B8B8
+$orange: #F18506
+$white: #ffffff
+$black-full: #000000
+$ber: #DFF5E4
+
+@mixin button ()
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 35px
+  
+
+.slick-slide 
+  img
+    margin: 0 auto
+
+.header
+  #navbarSupportedContent
+    justify-content: flex-end
+    align-items: center
+  .navbar-nav
+    align-items: center
+    .active
+      a
+        color: $salat !important
+    .nav-link
+      padding: 0 40px
+      font-size: 22px
+    .nav-link-pup
+      a
+        color: $white
+        font-size: 22px
+        @include button ()
+        background: $salat
+        padding: 20px 50px
+
+.container-fluid
+  padding: 0 60px
+
+.text-inner
+  margin: 70px 0 30px
+  h2
+    color: $black
+    font-weight: 600
+    font-size: 34px
+
+.top-product
+  text-align: center
+  justify-content: space-between
+  &__item
+    border: 1px solid $gray
+    border-radius: 8px
+    max-width: 430px
+    padding: 40px 45px 35px
+    &-img
+      max-width: 340px
+      margin: 0 auto
+      img
+        width: auto
+        display: block
+        height: 230px
+        margin: 0 auto
+    &-art
+      margin-top: 60px
+      text-align: left
+      color: $gray
+      font-size: 14px
+    &-title
+      font-size: 24px
+      text-align: left
+      font-weight: 500
+      span
+        color: $gray
+        font-size: 18px
+    &-price
+      margin-top: 30px
+      color: $orange
+      font-size: 24px
+      margin-bottom: 30px
+    &-buy
+      a
+        @include button ()
+        font-size: 24px
+        width: 260px
+        margin: 0 auto
+        font-weight: 500
+        border: 1px solid $salat
+        color: $salat
+        height: 68px
+    
+.store
+  margin-bottom: 100px
+  &__box
+    &-item
+      padding-left: 60px
+      margin-bottom: 50px
+      &-title
+        position: relative
+        h4
+          font-size: 28px
+          font-weight: 600
+          padding-top: 5px
+        img
+          position: absolute
+          left: -50px
+      &-tel
+        p
+          margin: 0
+        a
+          padding: 0
+          color: $black-full
+      &-bold
+        font-size: 20px
+        font-weight: 500
+        color: $black-full
+        margin: 0
+        
+/*articles*/
+.articles
+  margin-top: 40px
+  &__box
+    margin-bottom: 50px
+    &-title
+      margin-top: 30px
+      h2
+        font-size: 34px
+        font-weight: 600
+    &-text
+      p
+        font-size: 24px
+        line-height: 27px
+    &-sub
+      display: flex
+      justify-content: space-between
+
+/*about*/
+.center
+  text-align: center
+  margin-top: 100px
+  margin-bottom: 70px
+  font-size: 50px
+  font-weight: 600
+.about-one
+  &__img
+    img
+      display: block
+      width: 100%
+  &__title
+    h2
+      font-size: 50px
+      font-weight: 600
+    p
+      font-size: 24px
+      line-height: 27px
+      color: $black
+.about-two
+  margin-bottom: 100px
+  &__item
+    padding-left: 70px
+  &__number
+    position: absolute
+    left: 10px
+    top: 0
+    span
+      position: absolute
+      width: 50px
+      height: 50px
+      display: flex
+      justify-content: center
+      align-items: center
+      content: ''
+      background: $ber
+      border-radius: 50%
+      color: $green
+      font-weight: 600
+      font-size: 30px
+  &__title
+    h3
+      font-size: 30px
+      font-weight: 600
+  &__text
+    p
+      font-size: 24px
+      font-weight: 300
+      line-height: 27px
+  &__content
+    margin-top: 80px
+    margin-bottom: 100px
+  
+
+
+
+
+
+
+
+
+
+.footer
+  background: $black
+  &-main
+    padding: 60px 0
+    &__nav
+      .navbar-nav
+        .nav-item
+          .nav-link
+            color: $white
+    &__box
+      &-title
+        color: $white
+        font-size: 28px
+      p
+        color: $white
+      a
+        color: $white
+        font-size: 22px
+        @include button ()
+        background: $salat
+        width: 350px
+        height: 70px
+  &-copy
+    color: $white
+    margin: 0 auto
+  
