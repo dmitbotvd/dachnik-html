@@ -36,6 +36,8 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
       font-size: 22px
       @media ( max-width: 1440px )
         padding: 0 15px
+      @media ( max-width: 768px )
+        padding: 10px 15px
     .nav-link-pup
       a
         color: $white
@@ -45,11 +47,15 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
         padding: 20px 50px
         @media ( max-width: 1440px )
           padding: 15px 25px
+        @media ( max-width: 768px )
+          margin-bottom: 20px
 
 .container-fluid
   padding: 0 60px
   @media ( max-width: 1440px )
     padding: 0 30px    
+  @media ( max-width: 768px )
+    padding: 0 15px
 
 .text-inner
   margin: 70px 0 30px
@@ -149,19 +155,38 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
         margin: 0
         
 /*articles*/
+.category
+  margin-top: 150px
+  &__box
+    &-inner
+      background: $green
+      border-top-left-radius: 8px
+      border-top-right-radius: 8px
+    // .show
+    //   position: absolute
+    //   width: 100%
+    //   z-index: 10
 .articles
-  margin-top: 40px
+  margin-top: 50px
   &__box
     margin-bottom: 50px
+    &-img
+      img
+        display: block
+        width: 100%
     &-title
       margin-top: 30px
       h2
         font-size: 34px
         font-weight: 600
+        @media ( max-width: 1440px )
+          font-size: 24px
     &-text
       p
         font-size: 24px
         line-height: 27px
+        @media ( max-width: 1440px )
+          font-size: 18px
     &-sub
       display: flex
       justify-content: space-between
@@ -173,7 +198,11 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
   margin-bottom: 70px
   font-size: 50px
   font-weight: 600
+  @media ( max-width: 1440px )
+    margin-top: 60px
+    font-size: 34px
 .about-one
+  margin-top: 150px
   &__img
     img
       display: block
@@ -182,12 +211,22 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
     h2
       font-size: 50px
       font-weight: 600
+      @media ( max-width: 1440px )
+        font-size: 34px
     p
       font-size: 24px
       line-height: 27px
       color: $black
+      @media ( max-width: 1440px )
+        font-size: 18px
+        line-height: 20px
 .about-two
   margin-bottom: 100px
+  @media ( max-width: 1440px )
+    margin-bottom: 50px
+  &-img
+    img
+      width: 100%
   &__item
     padding-left: 70px
   &__number
@@ -211,15 +250,25 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
     h3
       font-size: 30px
       font-weight: 600
+      @media ( max-width: 1440px )
+        font-size: 22px
   &__text
     p
       font-size: 24px
       font-weight: 300
       line-height: 27px
+      @media ( max-width: 1440px )
+        font-size: 18px
+        line-height: 20px
   &__content
     margin-top: 80px
     margin-bottom: 100px
+    @media ( max-width: 1440px )
+      margin: 60px 0
   
+
+.product
+  margin-top: 150px
 
 
 

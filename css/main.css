@@ -38,6 +38,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .header .navbar-nav .nav-link {
+    padding: 10px 15px;
+  }
+}
+
 .header .navbar-nav .nav-link-pup a {
   color: #ffffff;
   font-size: 22px;
@@ -61,6 +67,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .header .navbar-nav .nav-link-pup a {
+    margin-bottom: 20px;
+  }
+}
+
 .container-fluid {
   padding: 0 60px;
 }
@@ -68,6 +80,12 @@
 @media (max-width: 1440px) {
   .container-fluid {
     padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 15px;
   }
 }
 
@@ -233,12 +251,27 @@
 }
 
 /*articles*/
+.category {
+  margin-top: 150px;
+}
+
+.category__box-inner {
+  background: #078523;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
 .articles {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .articles__box {
   margin-bottom: 50px;
+}
+
+.articles__box-img img {
+  display: block;
+  width: 100%;
 }
 
 .articles__box-title {
@@ -250,9 +283,21 @@
   font-weight: 600;
 }
 
+@media (max-width: 1440px) {
+  .articles__box-title h2 {
+    font-size: 24px;
+  }
+}
+
 .articles__box-text p {
   font-size: 24px;
   line-height: 27px;
+}
+
+@media (max-width: 1440px) {
+  .articles__box-text p {
+    font-size: 18px;
+  }
 }
 
 .articles__box-sub {
@@ -273,6 +318,17 @@
   font-weight: 600;
 }
 
+@media (max-width: 1440px) {
+  .center {
+    margin-top: 60px;
+    font-size: 34px;
+  }
+}
+
+.about-one {
+  margin-top: 150px;
+}
+
 .about-one__img img {
   display: block;
   width: 100%;
@@ -283,14 +339,37 @@
   font-weight: 600;
 }
 
+@media (max-width: 1440px) {
+  .about-one__title h2 {
+    font-size: 34px;
+  }
+}
+
 .about-one__title p {
   font-size: 24px;
   line-height: 27px;
   color: #1E1E1E;
 }
 
+@media (max-width: 1440px) {
+  .about-one__title p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
 .about-two {
   margin-bottom: 100px;
+}
+
+@media (max-width: 1440px) {
+  .about-two {
+    margin-bottom: 50px;
+  }
+}
+
+.about-two-img img {
+  width: 100%;
 }
 
 .about-two__item {
@@ -329,15 +408,38 @@
   font-weight: 600;
 }
 
+@media (max-width: 1440px) {
+  .about-two__title h3 {
+    font-size: 22px;
+  }
+}
+
 .about-two__text p {
   font-size: 24px;
   font-weight: 300;
   line-height: 27px;
 }
 
+@media (max-width: 1440px) {
+  .about-two__text p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
 .about-two__content {
   margin-top: 80px;
   margin-bottom: 100px;
+}
+
+@media (max-width: 1440px) {
+  .about-two__content {
+    margin: 60px 0;
+  }
+}
+
+.product {
+  margin-top: 150px;
 }
 
 .footer {
