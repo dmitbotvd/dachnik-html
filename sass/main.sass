@@ -360,9 +360,14 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
         font-size: 34px
         line-height: 40px
         font-weight: 600
+        @media ( max-width: 575px )
+          font-size: 22px
+          line-height: 30px
     &-price
       font-size: 32px
       color: $orange
+      @media ( max-width: 575px )
+        font-size: 22px
     &-button
       a
         @include button ()

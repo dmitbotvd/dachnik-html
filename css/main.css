@@ -599,9 +599,22 @@
   font-weight: 600;
 }
 
+@media (max-width: 575px) {
+  .product-inner__right-text h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
 .product-inner__right-price {
   font-size: 32px;
   color: #F18506;
+}
+
+@media (max-width: 575px) {
+  .product-inner__right-price {
+    font-size: 22px;
+  }
 }
 
 .product-inner__right-button a {
