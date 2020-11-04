@@ -7,6 +7,7 @@ $white: #ffffff
 $black-full: #000000
 $ber: #DFF5E4
 $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
+$mint: #DFF5E4
 
 @mixin button ()
   display: flex
@@ -18,7 +19,44 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
 .slick-slide 
   img
     margin: 0 auto
-
+.carousel-control-prev,
+.carousel-control-next
+  width: 5%
+.carousel-indicators li
+  width: 10px
+  height: 10px
+  border-radius: 100%
+  margin: 0 15px
+  border: 2px solid $white
+  background: none
+.carousel-indicators .active
+  background: $white
+.carousel-caption
+  position: absolute
+  left: 100px
+  top: 50%
+  transform: translateY(-50%)
+  width: 50%
+  right: auto
+  bottom: auto
+  h2
+    font-size: 30px
+    color: $green
+    text-align: left
+    font-weight: 600
+  h1
+    font-size: 70px
+    line-height: 80px
+    color: $white
+    text-align: left
+    font-weight: 600
+    span
+      color: $green
+  p
+    font-size: 16px
+    color: $white
+    font-style: italic
+    text-align: left
 .header
   .navbar
     background: $white
@@ -28,9 +66,22 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
     align-items: center
   .navbar-nav
     align-items: center
-    .active
-      a
-        color: $salat !important
+    .nav-item
+      .nav-link
+        position: relative
+        &:hover:after
+          position: absolute
+          bottom: -40px
+          width: 100%
+          left: 50%
+          transform: translateX(-50%)
+          max-width: 130px
+          background: $green
+          content: ''
+          height: 8px
+          display: block
+        &:hover
+          color: $green
     .nav-link
       padding: 0 40px
       font-size: 22px
@@ -45,10 +96,15 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
         @include button ()
         background: $salat
         padding: 20px 50px
+        border: 2px solid $white
         @media ( max-width: 1440px )
           padding: 15px 25px
         @media ( max-width: 768px )
           margin-bottom: 20px
+        &:hover
+          color: $green
+          background: none
+          border: 2px solid $green
 
 .container-fluid
   padding: 0 60px
@@ -80,7 +136,7 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
     margin: 0 15px 20px
     min-width: 22%
     width: 100%
-    max-width: 440px
+    max-width: 420px
     display: flex
     flex-direction: column
     justify-content: flex-end
@@ -93,9 +149,10 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
       margin: 0 20px
       img
         display: block
+        max-height: 230px
         height: auto
         margin: 0 auto
-        width: 100%
+        // width: 100%
         max-width: 330px
     &-art
       margin-top: 60px
@@ -126,9 +183,13 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
         width: 100%
         margin: 0 auto
         font-weight: 500
-        border: 1px solid $salat
+        border: 2px solid $salat
         color: $salat
         height: 68px
+        &:hover
+          background: $green
+          border: 2px solid $green
+          color: $white
 
     
 .store
@@ -162,14 +223,77 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
 .category
   margin-top: 150px
   &__box
+    position: relative
+    #collapseExampleMain
+      position: absolute
+      z-index: 10
+      width: 95%
+      .card
+        border: 1px solid $gray
+        #collapseExample
+          .card
+            border: none
+            .nav-link
+              color: $black
     &-inner
       background: $green
       border-top-left-radius: 8px
       border-top-right-radius: 8px
+      .btn
+        font-size: 34px
+        width: 100%
+        text-align: left
+        img
+          margin-left: 30px
+        span
+          margin-left: 30px
+          color: $white
+          font-weight: 600
+  .form-control
+    height: 65px
     // .show
     //   position: absolute
     //   width: 100%
     //   z-index: 10
+.paginations
+  .page-link
+    border: none
+    color: $black
+  &__button
+    display: flex
+    justify-content: center
+    margin-bottom: 100px
+    &-prev
+      a
+        @include button ()
+        border: 2px solid $green 
+        width: 275px
+        height: 70px
+        color: $green
+        font-size: 22px
+        margin: 0 15px
+        &:hover
+          border: 2px solid $green
+          background: $green
+          color: $white
+    &-next
+      a
+        @include button ()
+        border: 2px solid $green
+        width: 275px
+        height: 70px
+        font-size: 22px
+        margin: 0 15px
+        background: $green
+        color: $white
+        &:hover
+          color: $green
+          border: 2px solid $green
+          background: none
+
+
+
+
 .articles
   margin-top: 50px
   &__box
@@ -274,15 +398,28 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
 .product
   margin-top: 150px
   &__sidebar
+    &-block
+      padding: 1.25rem
+      #collapseExample
+        .card
+          border: none
+          .nav-link
+            color: $black
     &-inner
       border: 1px solid $gray
       border-radius: 8px
       &-text
          background: $green
-         h2
+         border-top-left-radius: 8px
+         border-top-right-radius: 8px
+         display: flex
+         padding: 2px
+         img
+           margin-left: 30px
+         span
           font-size: 34px
           color: $white
-          padding: 18px 0 18px 90px
+          margin-left: 30px
     &-box
       .btn
         text-align: left
@@ -330,7 +467,6 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
 
 /*product-inner*/
 .product-inner
-  margin-top: 150px
   &__left
     &-img
       border: 1px solid $gray
@@ -355,6 +491,17 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
         @media ( max-width: 575px )
           width: 100%
   &__right
+    &-count
+      background: $mint
+      display: flex
+      justify-content: center
+      align-items: center
+      max-width: 220px
+      height: 55px
+      width: 100%
+      margin-bottom: 30px
+      border-radius: 8px
+      font-size: 22px
     &-text
       h1
         font-size: 34px
@@ -365,6 +512,7 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
           line-height: 30px
     &-price
       font-size: 32px
+      margin-top: 30px
       color: $orange
       @media ( max-width: 575px )
         font-size: 22px
@@ -377,11 +525,23 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
         color: $white
         font-size: 22px
         margin: 40px 0
+        border: 2px solid $green
+        &:hover
+          border: 2px solid $green
+          background: none
+          color: $green
     &-description
       h2
         font-size: 30px
         font-weight: 600
 
+.bread
+  margin-top: 150px
+  .breadcrumb
+    background: none
+    &-item
+      a
+        color: $black
 
 
 
@@ -401,6 +561,18 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
         font-size: 28px
       p
         color: $white
+        &:nth-child(2)
+          position: relative
+          left: 45px
+          &:after
+           position: absolute
+           left: -45px
+           top: 10px
+           display: block
+           content: ''
+           width: 30px
+           height: 2px
+           background: $green 
       a
         color: $white
         font-size: 22px
@@ -409,6 +581,11 @@ $shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
         max-width: 350px
         width: 100%
         height: 70px
+        border: 2px soldi $green
+        &:hover
+          color: $green
+          background: none
+          border: 2px solid $green
   &-copy
     color: $white
     margin: 0 auto
