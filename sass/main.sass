@@ -247,8 +247,18 @@ $mint: #DFF5E4
         #collapseExample
           .card
             border: none
+            padding: 0 1.25rem
             .nav-link
               color: $black
+    &-title
+      .btn
+        display: flex
+        &:active
+          box-shadow: none
+        &:focus
+          box-shadow: none
+        span
+          margin-left: 15px
     &-inner
       background: $green
       border-top-left-radius: 8px
@@ -265,6 +275,12 @@ $mint: #DFF5E4
           font-weight: 600
           @media ( max-width: 768px )
             font-size: 22px
+    &-drop
+      #collapseExampleTwo
+        .card
+          border: none !important
+          .nav-link
+            color: $black
   .form-control
     height: 65px
     // .show
@@ -425,13 +441,35 @@ $mint: #DFF5E4
 .product
   margin-top: 150px
   &__sidebar
+    &-Availability-box
+      .btn
+        &:active
+          box-shadow: none
+        &:focus
+          box-shadow: none
+      .show
+        .card
+          border: none !important
+    &-price
+      &-box
+        .btn
+          &:active
+            box-shadow: none
+          &:focus
+            box-shadow: none
+    .show
+      .card
+        border: none !important
     &-block
       padding: 1.25rem
       #collapseExample
         .card
           border: none
+          padding: 0 1.25rem
           .nav-link
             color: $black
+            span
+              margin-left: 15px
     &-inner
       border: 1px solid $gray
       border-radius: 8px
@@ -450,14 +488,25 @@ $mint: #DFF5E4
     &-box
       .btn
         text-align: left
+        display: flex
+        &:active
+          box-shadow: none
+        &:focus
+          box-shadow: none
+        span
+          margin-left: 15px
       .collapse
         .nav-link
           a
             color: $black
   &__sector
+    @media ( max-width: 1024px )
+      margin-top: 20px
     &-box
       display: flex
       justify-content: center
+      @media ( max-width: 1440px )
+        justify-content: space-between
     &-item
       border: 1px solid $gray
       border-radius: 8px
